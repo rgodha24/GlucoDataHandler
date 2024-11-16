@@ -46,6 +46,14 @@ class IobComplication: IobCobComplicationsBase() {
     }
 }
 
+class IobUComplication : IobCobComplicationsBase() {
+    override fun getText(): PlainComplicationText = plainText("${ReceiveData.iobString} U")
+    override fun getIcon(): MonochromaticImage? = null
+    override fun getDescription(): String {
+        return getDescriptionForContent(iob = true)
+    }
+}
+
 class CobComplication: IobCobComplicationsBase() {
     override fun getText(): PlainComplicationText = cobText(false)
     override fun getIcon(): MonochromaticImage = cobIcon()
