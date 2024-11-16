@@ -25,6 +25,7 @@ import de.michelinside.glucodatahandler.common.utils.PackageUtils
 enum class WidgetType(val cls: Class<*>) {
     GLUCOSE(GlucoseWidget::class.java),
     GLUCOSE_TREND(GlucoseTrendWidget::class.java),
+    GLUCOSE_TREND_IOB(GlucoseTrendIobWidget::class.java),
     GLUCOSE_TREND_DELTA(GlucoseTrendDeltaWidget::class.java),
     GLUCOSE_TREND_DELTA_TIME(GlucoseTrendDeltaTimeWidget::class.java),
     GLUCOSE_TREND_DELTA_TIME_IOB_COB(GlucoseTrendDeltaTimeIobCobWidget::class.java),
@@ -232,7 +233,7 @@ abstract class GlucoseBaseWidget(private val type: WidgetType,
             remoteViews.setTextViewText(R.id.unitText,  ReceiveData.getOtherUnit())
 
         if (hasIobCob) {
-            remoteViews.setTextViewText(R.id.iobText, "💉 " + ReceiveData.getIobAsString())
+            remoteViews.setTextViewText(R.id.iobText, ReceiveData.getIobAsString())
             remoteViews.setContentDescription(R.id.iobText, context.getString(CR.string.info_label_iob) + " " + ReceiveData.getIobAsString())
             remoteViews.setTextViewText(R.id.cobText, "🍔 " + ReceiveData.getCobAsString())
             remoteViews.setContentDescription(R.id.cobText, context.getString(CR.string.info_label_cob) + " " + ReceiveData.getCobAsString())
