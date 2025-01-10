@@ -128,6 +128,14 @@
             android:summaryOn="@string/src_offline_enabled_summary_on"
             android:title="@string/src_enabled"
             app:iconSpaceReserved="false" />
+        <de.michelinside.glucodatahandler.preferences.NotificationSourceAppPreference
+            android:key="source_notification_bloodsugar_app"
+            android:title="@string/source_notification_bloodsugar_app"
+            app:iconSpaceReserved="false" />
+        <de.michelinside.glucodatahandler.preferences.NotificationSourceAppPreference
+            android:key="source_notification_iob_app"
+            android:title="@string/source_notification_iob_app"
+            app:iconSpaceReserved="false" />
         <Preference
             android:key="source_notification_info"
             android:summary="@string/pref_source_notification_info_summary"

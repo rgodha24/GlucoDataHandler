@@ -144,7 +144,10 @@ object Constants {
     const val SHARED_PREF_SOURCE_BYODA_ENABLED="source_byoda_enabled"
     const val SHARED_PREF_SOURCE_EVERSENSE_ENABLED="source_eversense_enabled"
     const val SHARED_PREF_SOURCE_DIABOX_ENABLED="source_diabox_enabled"
+    // notification source
     const val SHARED_PREF_SOURCE_NOTIFICATION_ENABLED="source_notification_enabled"
+    const val SHARED_PREF_NOTIFICATION_BLOODSUGAR_APP = "source_notification_bloodsugar_app"
+    const val SHARED_PREF_NOTIFICATION_IOB_APP = "source_notification_iob_app"
 
     // online sources
     const val SHARED_PREF_LIBRE_ENABLED="source_libre_enabled"

@@ -21,6 +21,9 @@ abstract class SettingsFragmentCompatBase: PreferenceFragmentCompat() {
         } else if (preference is TapActionPreference) {
             Log.d(LOG_ID, "Show SelectReceiver Dialog")
             dialogFragment = TapActionPreferenceDialogFragmentCompat.initial(preference.key)
+        } else if (preference is NotificationSourceAppPreference) {
+            Log.d(LOG_ID, "Show Select Notification App Dialog")
+            dialogFragment = NotificationSourceAppDialogFragmentCompat.initial(preference.key)
         }
         return dialogFragment
     }
