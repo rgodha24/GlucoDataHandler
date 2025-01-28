@@ -1,8 +1,9 @@
 package de.michelinside.glucodatahandler.common.notifier
 
+import de.michelinside.glucodatahandler.common.Constants
 import de.michelinside.glucodatahandler.common.R
 
-enum class DataSource(val resId: Int) {
+enum class DataSource(val resId: Int, val interval5Min: Boolean = false) {
     NONE(R.string.empty_string),
     JUGGLUCO(R.string.source_juggluco),
     XDRIP(R.string.source_xdrip),
